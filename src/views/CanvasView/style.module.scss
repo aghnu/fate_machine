@@ -1,0 +1,23 @@
+@keyframes rotating {
+  from {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+  }
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perspective-anchor {
+  perspective-origin: 50% 50%;
+}
+
+.rotating-target {
+  transform-style: preserve-3d;
+  animation: rotating 20s linear infinite;
+}
